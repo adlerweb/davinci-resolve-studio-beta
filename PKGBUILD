@@ -1,14 +1,17 @@
 # Maintainer: Alex S. <shantanna_at_hotmail_dot_com>
 # Contributor: Jonathon Fernyhough <jonathon_at_manjaro_dot_org>
+# Contributor: Florian Knodt <aur_at_adlerweb_dot_info>
 
 # Hardware support is limited. Nvidia cards should work fine.
 # If you're running a hybrid setup, try with primusrun/optirun.
 
 # This was originally written by Daniel Bermond in blackmagic-decklink-sdk pkgbuild
-# It is sufficient to just replace _downloadid to correspond new release version
-# It can be obtained from chromium -> Developer Tools -> Network -> XHR -> click latest-version and copy downloadId
-_downloadid='524de2183bad4ec880abbd9635c24629'
-_referid='d8b836df60d24968877251fcbe611cc5'
+# It is sufficient to just replace _downloadid and possibly _referid to correspond
+# new release version. It can be obtained from Developer Tools -> Network.
+# Look for an URL like https://www.blackmagicdesign.com/api/register/de/download/XXX
+# where XXX is _downloadid and Referer containing _referid
+_downloadid='cd2518a435254d289ae83367fb5d972d'
+_referid='d33ad0df1c04430bbeda60fe3eb6f897'
 _siteurl="https://www.blackmagicdesign.com/api/register/us/download/${_downloadid}"
 
 _useragent="User-Agent: Mozilla/5.0 (X11; Linux ${CARCH}) \
@@ -16,16 +19,7 @@ _useragent="User-Agent: Mozilla/5.0 (X11; Linux ${CARCH}) \
                         Chrome/77.0.3865.75 \
                         Safari/537.36"
 
-_reqjson="{ \
-    \"firstname\": \"Arch\", \
-    \"lastname\": \"Linux\", \
-    \"email\": \"someone@archlinux.org\", \
-    \"phone\": \"202-555-0194\", \
-    \"country\": \"us\", \
-    \"state\": \"New York\", \
-    \"city\": \"AUR\", \
-    \"product\": \"DaVinci Resolve Studio\" \
-}"
+_reqjson="{\"platform\":\"Linux\",\"policy\":true,\"product\":{\"name\":\"DaVinci Resolve Studio\"},\"country\":\"us\",\"downloadOnly\":true,\"origin\":\"www.blackmagicdesign.com\"}"
 
 _reqjson="$(  printf '%s' "$_reqjson"   | sed 's/[[:space:]]\+/ /g')"
 _useragent="$(printf '%s' "$_useragent" | sed 's/[[:space:]]\+/ /g')"
@@ -49,7 +43,7 @@ _srcurl="$(curl \
 
 DLAGENTS=("https::/usr/bin/curl \
             -gqb '' -C - --retry 3 --retry-delay 3 \
-            -H Host:\ sw.blackmagicdesign.com \
+            -H Host:\ swr.cloud.blackmagicdesign.com \
             -H Upgrade-Insecure-Requests:\ 1 \
             -H ${_useragent_escaped} \
             -H Accept:\ text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8 \
@@ -61,7 +55,7 @@ DLAGENTS=("https::/usr/bin/curl \
 pkgname=davinci-resolve-studio-beta
 _pkgname=resolve
 resolve_app_name=com.blackmagicdesign.resolve
-pkgver=18.5b4
+pkgver=19.0b1
 pkgrel=1
 arch=('x86_64')
 url="https://www.blackmagicdesign.com/support/family/davinci-resolve-and-fusion"
@@ -76,7 +70,7 @@ if [ ${pkgname} == "davinci-resolve-studio-beta" ]; then
 # Variables for STUDIO edition
 	pkgdesc='Professional A/V post-production software suite from Blackmagic Design. Studio edition, requires license key or license dongle.'
 	_archive_name=DaVinci_Resolve_Studio_${pkgver}_Linux
-	sha256sums=('2ea1ae6c2eb210ef179c6de7b127b067110cc6acbb16df982f72c640df816fb4')
+	sha256sums=('1b86aaa2320e15bf2e78993a2ce3ee9dbe8697e96181a9cce08089fdaccaedf7')
 	conflicts=('davinci-resolve-beta' 'davinci-resolve' 'davinci-resolve-studio')
 else
 # Variables for FREE edition
