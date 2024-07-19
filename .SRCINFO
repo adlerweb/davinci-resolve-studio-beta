@@ -1,6 +1,6 @@
 pkgbase = davinci-resolve-studio-beta
 	pkgdesc = Professional A/V post-production software suite from Blackmagic Design. Studio edition, requires license key or license dongle.
-	pkgver = 19.0b4
+	pkgver = 19.0b5
 	pkgrel = 1
 	url = https://www.blackmagicdesign.com/support/family/davinci-resolve-and-fusion
 	arch = x86_64
@@ -34,7 +34,7 @@ pkgbase = davinci-resolve-studio-beta
 	conflicts = davinci-resolve
 	conflicts = davinci-resolve-studio
 	options = !strip
-	source = DaVinci_Resolve_Studio_19.0b4_Linux.zip::https://swr.cloud.blackmagicdesign.com/DaVinciResolve/v19.0b4/DaVinci_Resolve_Studio_19.0b4_Linux.zip?verify=1720118487-RBRgNwKNHI4Vz3rji3mTOzuudZfmqmcpvo83f62CY0w%3D
-	sha256sums = 988fd0b6708dccb5532d776ded49577b299a486045a5a7d85ebd0327cd20b973
+	source = DaVinci_Resolve_Studio_19.0b5_Linux.zip::https://swr.cloud.blackmagicdesign.com/DaVinciResolve/v19.0b5-1/DaVinci_Resolve_Studio_19.0b5_Linux.zip?verify=1721407289-xpXgSaF7lNkjuJPzrloak73sjCCPOb%2BemMZOsl7rXJM%3D
+	sha256sums = 25f7e1477ad53ae7ce7ac622a9f04b4a18a7ad3c6d363b7d68af46bba8044725
 
 pkgname = davinci-resolve-studio-beta
