@@ -10,7 +10,7 @@
 # new release version. It can be obtained from Developer Tools -> Network.
 # Look for an URL like https://www.blackmagicdesign.com/api/register/de/download/XXX
 # where XXX is _downloadid and Referer containing _referid
-_downloadid='cf73de4f751b4722b122aa0308c2ccf5'
+_downloadid='638988a9021044068642b69cca6f075f'
 _referid='d33ad0df1c04430bbeda60fe3eb6f897'
 _siteurl="https://www.blackmagicdesign.com/api/register/us/download/${_downloadid}"
 
@@ -55,7 +55,7 @@ DLAGENTS=("https::/usr/bin/curl \
 pkgname=davinci-resolve-studio-beta
 _pkgname=resolve
 resolve_app_name=com.blackmagicdesign.resolve
-pkgver=19.0b5
+pkgver=19.0b6
 pkgrel=1
 arch=('x86_64')
 url="https://www.blackmagicdesign.com/support/family/davinci-resolve-and-fusion"
@@ -70,7 +70,7 @@ if [ ${pkgname} == "davinci-resolve-studio-beta" ]; then
 # Variables for STUDIO edition
 	pkgdesc='Professional A/V post-production software suite from Blackmagic Design. Studio edition, requires license key or license dongle.'
 	_archive_name=DaVinci_Resolve_Studio_${pkgver}_Linux
-	sha256sums=('25f7e1477ad53ae7ce7ac622a9f04b4a18a7ad3c6d363b7d68af46bba8044725')
+	sha256sums=('7f8f9acb6504b85b5cd508bd95925f271101400f276b7e7bedc48cce72b7ca79')
 	conflicts=('davinci-resolve-beta' 'davinci-resolve' 'davinci-resolve-studio')
 else
 # Variables for FREE edition
