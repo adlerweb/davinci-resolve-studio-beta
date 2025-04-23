@@ -1,4 +1,5 @@
-# Maintainer: Alex S. <shantanna_at_hotmail_dot_com>
+# Contributor: Muflone http://www.muflone.com/contacts/english/
+# Contributor: Alex S. <shantanna_at_hotmail_dot_com>
 # Contributor: Jonathon Fernyhough <jonathon_at_manjaro_dot_org>
 # Contributor: Florian Knodt <aur_at_adlerweb_dot_info>
 
@@ -10,7 +11,7 @@
 # new release version. It can be obtained from Developer Tools -> Network.
 # Look for an URL like https://www.blackmagicdesign.com/api/register/de/download/XXX
 # where XXX is _downloadid and Referer containing _referid
-_downloadid='9248e8caea9c434fa519bdb3c9ac4132'
+_downloadid='8a02af2f44a74462b4793d62f4a7eb32'
 _referid='d33ad0df1c04430bbeda60fe3eb6f897'
 _siteurl="https://www.blackmagicdesign.com/api/register/us/download/${_downloadid}"
 
@@ -55,7 +56,7 @@ DLAGENTS=("https::/usr/bin/curl \
 pkgname=davinci-resolve-studio-beta
 _pkgname=resolve
 resolve_app_name=com.blackmagicdesign.resolve
-pkgver=20.0b1
+pkgver=20.0b2
 pkgrel=1
 arch=('x86_64')
 url="https://www.blackmagicdesign.com/support/family/davinci-resolve-and-fusion"
@@ -69,7 +70,7 @@ options=('!strip')
 
 # Variables for STUDIO edition
 pkgdesc='Professional A/V post-production software suite from Blackmagic Design. Studio edition, requires license key or license dongle.'
-sha256sums=('ced2f69025e2145a28ba16d714b27553ac22b3a59de787ab36c5dec13b3f4ffb')
+sha256sums=('2598497ffb173f3140d2216955a2bea35235884799b52f1dd0c87c56a108e5c1')
 conflicts=('davinci-resolve-beta' 'davinci-resolve' 'davinci-resolve-studio')
 _archive_name=DaVinci_Resolve_Studio_${pkgver}_Linux
 _archive=${_archive_name}.zip
