@@ -11,7 +11,7 @@
 # new release version. It can be obtained from Developer Tools -> Network.
 # Look for an URL like https://www.blackmagicdesign.com/api/register/de/download/XXX
 # where XXX is _downloadid and Referer containing _referid
-_downloadid='407110f9045e410996bb9ff3ad6956d5'
+_downloadid='ef5d9061181b4de4970d2c8f3bfd237e'
 _referid='a6e2bbb59c294d728d131fa21d18676b'
 _siteurl="https://www.blackmagicdesign.com/api/register/us/download/${_downloadid}"
 
@@ -55,7 +55,7 @@ DLAGENTS=("https::/usr/bin/curl \
 
 _pkgname=resolve
 pkgname=davinci-resolve-studio
-pkgver=20.0
+pkgver=20.0.1
 pkgrel=1
 pkgdesc='Professional A/V post-production software suite from Blackmagic Design. Studio edition, requires license key or license dongle.'
 arch=('x86_64')
@@ -71,7 +71,7 @@ _archive_name=DaVinci_Resolve_Studio_${pkgver}_Linux
 _archive=${_archive_name}.zip
 source=("${_archive}"::"$_srcurl"
         "davinci-control-panels-setup.sh")
-sha256sums=('932f6fe372293baa148aab0d60a963417e713600fd37ea6c6cd09a37e63c7e09'
+sha256sums=('e727cb84a955335d322b53f607e60f85770f58da65301d576f5ff859ab8c658f'
             'f17236fd68cead727c647bc31404e402922cdd491df5526f4b62364cbef9d3b8')
 install="${pkgname}.install"
 options=('!strip')
@@ -86,8 +86,8 @@ prepare() {
   pushd "squashfs-root/share/panels"
   tar -zxf dvpanel-framework-linux-x86_64.tgz
   chmod -R u+rwX,go+rX,go-w "lib"
-  mv *.so "${srcdir}/squashfs-root/libs"
-  mv lib/* "${srcdir}/squashfs-root/libs"
+  cp *.so "${srcdir}/squashfs-root/libs"
+  cp lib/* "${srcdir}/squashfs-root/libs"
   popd
 
   rm -rf squashfs-root/installer squashfs-root/installer* squashfs-root/AppRun squashfs-root/AppRun*
