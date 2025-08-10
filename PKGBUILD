@@ -8,9 +8,9 @@
 
 # This was originally written by Daniel Bermond in blackmagic-decklink-sdk pkgbuild
 # It is sufficient to just replace _downloadid and possibly _referid to correspond
-# new release version. It can be obtained from Developer Tools -> Network.
-# Look for an URL like https://www.blackmagicdesign.com/api/register/de/download/XXX
-# where XXX is _downloadid and Referer containing _referid
+# new release version. It can be obtained using Developer Tools→Network on
+# https://www.blackmagicdesign.com/de/support/. Look for an URL like
+# https://www.blackmagicdesign.com/api/register/de/download/XXX
 _downloadid='2addc9e5b2ab4627a1be8cfbf19d9f2c'
 _referid='a6e2bbb59c294d728d131fa21d18676b'
 _siteurl="https://www.blackmagicdesign.com/api/register/us/download/${_downloadid}"
