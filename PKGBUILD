@@ -11,7 +11,7 @@
 # new release version. It can be obtained from Developer Tools -> Network.
 # Look for an URL like https://www.blackmagicdesign.com/api/register/de/download/XXX
 # where XXX is _downloadid and Referer containing _referid
-_downloadid='ef5d9061181b4de4970d2c8f3bfd237e'
+_downloadid='2addc9e5b2ab4627a1be8cfbf19d9f2c'
 _referid='a6e2bbb59c294d728d131fa21d18676b'
 _siteurl="https://www.blackmagicdesign.com/api/register/us/download/${_downloadid}"
 
@@ -55,7 +55,7 @@ DLAGENTS=("https::/usr/bin/curl \
 
 _pkgname=resolve
 pkgname=davinci-resolve-studio
-pkgver=20.0.1
+pkgver=20.1
 pkgrel=1
 pkgdesc='Professional A/V post-production software suite from Blackmagic Design. Studio edition, requires license key or license dongle.'
 arch=('x86_64')
@@ -66,12 +66,12 @@ depends=('glu' 'gtk2' 'libpng12' 'fuse2' 'opencl-driver' 'qt5-x11extras' 'qt5-sv
          'java-runtime' 'ffmpeg4.4' 'gst-plugins-bad-libs' 'python-numpy' 
          'tbb' 'apr-util' 'luajit' 'libc++' 'libc++abi')
 makedepends=('libarchive' 'xdg-user-dirs' 'patchelf')
-conflicts=('davinci-resolve' 'davinci-resolve-beta' 'davinci-resolve-studio')
+conflicts=('davinci-resolve' 'davinci-resolve-beta' 'davinci-resolve-studio-beta')
 _archive_name=DaVinci_Resolve_Studio_${pkgver}_Linux
 _archive=${_archive_name}.zip
 source=("${_archive}"::"$_srcurl"
         "davinci-control-panels-setup.sh")
-sha256sums=('e727cb84a955335d322b53f607e60f85770f58da65301d576f5ff859ab8c658f'
+sha256sums=('c6806a0bbcb243dc8a2a2bbdec4380c48a65e175a165aacc21ad43e00dab0935'
             'f17236fd68cead727c647bc31404e402922cdd491df5526f4b62364cbef9d3b8')
 install="${pkgname}.install"
 options=('!strip')
