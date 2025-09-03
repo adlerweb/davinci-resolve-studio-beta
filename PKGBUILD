@@ -12,7 +12,7 @@
 # https://www.blackmagicdesign.com/de/support/. Look for an URL like
 # https://www.blackmagicdesign.com/api/register/de/download/XXX
 # where XXX is _downloadid and Referer containing _referid
-_downloadid='2addc9e5b2ab4627a1be8cfbf19d9f2c'
+_downloadid='6b3cc20ee7134881a5d2079fc30f924f'
 _referid='a6e2bbb59c294d728d131fa21d18676b'
 _siteurl="https://www.blackmagicdesign.com/api/register/us/download/${_downloadid}"
 
@@ -56,7 +56,7 @@ DLAGENTS=("https::/usr/bin/curl \
 
 _pkgname=resolve
 pkgname=davinci-resolve-studio
-pkgver=20.1
+pkgver=20.1.1
 pkgrel=1
 pkgdesc='Professional A/V post-production software suite from Blackmagic Design. Studio edition, requires license key or license dongle.'
 arch=('x86_64')
@@ -72,7 +72,7 @@ _archive_name=DaVinci_Resolve_Studio_${pkgver}_Linux
 _archive=${_archive_name}.zip
 source=("${_archive}"::"$_srcurl"
         "davinci-control-panels-setup.sh")
-sha256sums=('c6806a0bbcb243dc8a2a2bbdec4380c48a65e175a165aacc21ad43e00dab0935'
+sha256sums=('58a25393227d68d395262ee76767039079c4113f858e115117d82900834b1b35'
             'f17236fd68cead727c647bc31404e402922cdd491df5526f4b62364cbef9d3b8')
 install="${pkgname}.install"
 options=('!strip')
