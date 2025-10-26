@@ -13,6 +13,7 @@
 # https://www.blackmagicdesign.com/api/register/de/download/XXX
 # where XXX is _downloadid and Referer containing _referid
 pkgver=20.2.2
+pkgrel=2
 _downloadid='8bb647adca65489fa74b841e74f9ddb9'
 sha256sums=('1e39b270902e1860ac994418ca292e7989220001219a28cb9992e8f7168499d8'
             'f17236fd68cead727c647bc31404e402922cdd491df5526f4b62364cbef9d3b8')
@@ -61,7 +62,6 @@ DLAGENTS=("https::/usr/bin/curl \
 
 _pkgname=resolve
 pkgname=davinci-resolve-studio
-pkgrel=1
 pkgdesc='Professional A/V post-production software suite from Blackmagic Design. Studio edition, requires license key or license dongle.'
 arch=('x86_64')
 url="https://www.blackmagicdesign.com/support/family/davinci-resolve-and-fusion"
@@ -149,14 +149,10 @@ prepare() {
     sed -i "s|RESOLVE_INSTALL_LOCATION|/opt/${_pkgname}|g" "${_file}"
   done < <(find . -type f '(' -name "*.desktop" -o -name "*.directory" -o -name "*.directory" -o -name "*.menu" ')' -print0)
 
-  rm "squashfs-root/libs/libc++.so.1" \
-    "squashfs-root/libs/libglib-2.0.so.0" \
+  rm "squashfs-root/libs/libglib-2.0.so.0" \
     "squashfs-root/libs/libgio-2.0.so.0" \
-    "squashfs-root/libs/libgmodule-2.0.so.0" \
-    "squashfs-root/libs/libc++abi.so.1"
+    "squashfs-root/libs/libgmodule-2.0.so.0"
   ln -s "../BlackmagicRAWPlayer/BlackmagicRawAPI" "squashfs-root/bin/"
-  ln -s /usr/lib/libc++.so.1.0 "squashfs-root/libs/libc++.so.1"
-  ln -s /usr/lib/libc++abi.so.1.0 "squashfs-root/libs/libc++abi.so.1"
   ln -s /usr/lib/libglib-2.0.so.0 "squashfs-root/libs/libglib-2.0.so.0"
   ln -s /usr/lib/libgio-2.0.so.0 "squashfs-root/libs/libgio-2.0.so.0"
   ln -s /usr/lib/libgmodule-2.0.so.0 "squashfs-root/libs/libgmodule-2.0.so.0"
