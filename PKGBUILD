@@ -12,11 +12,11 @@
 # https://www.blackmagicdesign.com/de/support/. Look for an URL like
 # https://www.blackmagicdesign.com/api/register/de/download/XXX
 # where XXX is _downloadid and Referer containing _referid
-pkgver=21.0b4
+pkgver=21.0.1
 pkgrel=1
-_downloadid='b9553997c2ab40f8923841bf307107b7'
-sha256sums=('c11aba33b7dec659e2065cf9ae05f2d7b5c30c584c28a6487ef061a6134465f1'
-            '455d5c392e65801ed7c1d40cae6de8cd9563109cba56acb8883a3a5c3def6cc9')
+_downloadid='a95b1e7f4f8846bdb2eb4500f1793229'
+sha256sums=('d937cf71751c418b5e8a1d8098aee5cda7fd566bfbbf61a21864a3038c1e2d82'
+            'f17236fd68cead727c647bc31404e402922cdd491df5526f4b62364cbef9d3b8')
 
 
 _referid='a6e2bbb59c294d728d131fa21d18676b'
@@ -61,7 +61,7 @@ DLAGENTS=("https::/usr/bin/curl \
             %u")
 
 _pkgname=resolve
-pkgname=davinci-resolve-studio-beta
+pkgname=davinci-resolve-studio
 pkgdesc='Professional A/V post-production software suite from Blackmagic Design. Studio edition, requires license key or license dongle.'
 arch=('x86_64')
 url="https://www.blackmagicdesign.com/support/family/davinci-resolve-and-fusion"
@@ -71,7 +71,7 @@ depends=('glu' 'gtk2' 'libpng12' 'fuse2' 'opencl-driver' 'qt5-x11extras' 'qt5-sv
          'java-runtime' 'ffmpeg4.4' 'gst-plugins-bad-libs' 'python-numpy'
          'tbb' 'apr-util' 'luajit' 'libc++' 'libc++abi')
 makedepends=('libarchive' 'xdg-user-dirs' 'patchelf')
-conflicts=('davinci-resolve-studio' 'davinci-resolve' 'davinci-resolve-beta')
+conflicts=('davinci-resolve-studio-beta' 'davinci-resolve' 'davinci-resolve-beta')
 _archive_name=DaVinci_Resolve_Studio_${pkgver}_Linux
 _archive=${_archive_name}.zip
 source=("${_archive}"::"$_srcurl"
