@@ -12,10 +12,10 @@
 # https://www.blackmagicdesign.com/de/support/. Look for an URL like
 # https://www.blackmagicdesign.com/api/register/de/download/XXX
 # where XXX is _downloadid and Referer containing _referid
-pkgver=21.0.1
+pkgver=21.0.2
 pkgrel=1
-_downloadid='a95b1e7f4f8846bdb2eb4500f1793229'
-sha256sums=('d937cf71751c418b5e8a1d8098aee5cda7fd566bfbbf61a21864a3038c1e2d82'
+_downloadid='ec36996cf2694986b514285fffa37e46'
+sha256sums=('d2e502daa00a60ebe00af62b608ccd3fdde1b490a8cea62a2303133ec01652bd'
             'f17236fd68cead727c647bc31404e402922cdd491df5526f4b62364cbef9d3b8')
 
 
@@ -66,9 +66,9 @@ pkgdesc='Professional A/V post-production software suite from Blackmagic Design.
 arch=('x86_64')
 url="https://www.blackmagicdesign.com/support/family/davinci-resolve-and-fusion"
 license=('LicenseRef-Commercial')
-depends=('glu' 'gtk2' 'libpng12' 'fuse2' 'opencl-driver' 'qt5-x11extras' 'qt5-svg' 'qt5-webengine'
-         'qt5-websockets' 'qt5-quickcontrols2' 'qt5-multimedia' 'libxcrypt-compat' 'xmlsec'
-         'java-runtime' 'ffmpeg4.4' 'gst-plugins-bad-libs' 'python-numpy'
+depends=('glu' 'fuse2' 'opencl-driver' 'qt5-x11extras' 'qt5-svg'
+         'qt5-quickcontrols2' 'qt5-multimedia' 'libxcrypt-compat' 'xmlsec'
+         'java-runtime' 'ffmpeg4.4' 'gst-plugins-bad-libs' 'python-numpy' 
          'tbb' 'apr-util' 'luajit' 'libc++' 'libc++abi')
 makedepends=('libarchive' 'xdg-user-dirs' 'patchelf')
 conflicts=('davinci-resolve-studio-beta' 'davinci-resolve' 'davinci-resolve-beta')
