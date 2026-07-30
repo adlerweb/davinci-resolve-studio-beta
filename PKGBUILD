@@ -12,20 +12,17 @@
 # https://www.blackmagicdesign.com/de/support/. Look for an URL like
 # https://www.blackmagicdesign.com/api/register/de/download/XXX
 # where XXX is _downloadid and Referer containing _referid
-pkgver=21.0.2
+pkgver=21.0.3
 pkgrel=1
-_downloadid='ec36996cf2694986b514285fffa37e46'
-sha256sums=('d2e502daa00a60ebe00af62b608ccd3fdde1b490a8cea62a2303133ec01652bd'
+_downloadid='60c57e20c37d488882dfea5b8d15355a'
+sha256sums=('32d8a894e2f8c5ef172e5d2fdf264a96b2f5e4928a2cfcb8a6595b174234695c'
             'f17236fd68cead727c647bc31404e402922cdd491df5526f4b62364cbef9d3b8')
 
 
-_referid='a6e2bbb59c294d728d131fa21d18676b'
+_referid='257ac6878ddf40dc8c8b72c3b65c0de3'
 _siteurl="https://www.blackmagicdesign.com/api/register/us/download/${_downloadid}"
 
-_useragent="User-Agent: Mozilla/5.0 (X11; Linux ${CARCH}) \
-                        AppleWebKit/537.36 (KHTML, like Gecko) \
-                        Chrome/77.0.3865.75 \
-                        Safari/537.36"
+_useragent="User-Agent: Mozilla/5.0 (X11; Linux ${CARCH}) Gecko/20100101 Firefox/152.0"
 
 _reqjson="{\"platform\":\"Linux\",\"policy\":true,\"product\":{\"name\":\"DaVinci Resolve Studio\"},\"country\":\"us\",\"downloadOnly\":true,\"origin\":\"www.blackmagicdesign.com\"}"
 
@@ -44,14 +41,12 @@ _srcurl="$(curl \
             -H 'Accept-Encoding: gzip, deflate, br' \
             -H 'Accept-Language: en-US,en;q=0.9' \
             -H 'Authority: www.blackmagicdesign.com' \
-            -H 'Cookie: _ga=GA1.2.1849503966.1518103294; _gid=GA1.2.953840595.1518103294' \
             --data-ascii "$_reqjson" \
             --compressed \
             "$_siteurl")"
 
 DLAGENTS=("https::/usr/bin/curl \
             -gqb '' -C - --retry 3 --retry-delay 3 \
-            -H Host:\ swr.cloud.blackmagicdesign.com \
             -H Upgrade-Insecure-Requests:\ 1 \
             -H ${_useragent_escaped} \
             -H Accept:\ text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8 \
