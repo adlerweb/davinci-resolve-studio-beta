@@ -12,10 +12,10 @@
 # https://www.blackmagicdesign.com/de/support/. Look for an URL like
 # https://www.blackmagicdesign.com/api/register/de/download/XXX
 # where XXX is _downloadid and Referer containing _referid
-pkgver=21.0.3
+pkgver=21.0.4
 pkgrel=1
-_downloadid='60c57e20c37d488882dfea5b8d15355a'
-sha256sums=('32d8a894e2f8c5ef172e5d2fdf264a96b2f5e4928a2cfcb8a6595b174234695c'
+_downloadid='f6af677f3e3741f59a014b54445bd39e'
+sha256sums=('9fbbc5d919072d5d133e945d60e315b3d2acf3796732e3dac9dd3babb8b063cb'
             'f17236fd68cead727c647bc31404e402922cdd491df5526f4b62364cbef9d3b8')
 
 
